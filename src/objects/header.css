@@ -1,0 +1,25 @@
+#head{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    background:#badc58;
+    z-index: 1;
+}
+
+#appName{
+    position: absolute;
+    font-size: 35px;
+    margin-left: 15px;
+    margin-top: 5px;
+    color: #30336b;
+    font-family: AppNameFont;
+}
+
+@font-face {
+    font-family: 'AppNameFont';
+    src: url("../fonts/Montserrat-Bold.ttf");
+}
