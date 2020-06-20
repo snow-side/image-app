@@ -23,11 +23,10 @@ class Body extends React.Component{
     onClickNext(){
         const min = 0;
         const max = 4;
-        const rand = Math.floor(min + Math.random() * (max - min));
-        const lastRand = rand;
-        console.log(rand);
-        console.log(lastRand);
-        this.setState({index: rand})
+        if(this.state.index + 1 == 5)
+            this.setState({index: 0})
+        else
+            this.setState({index: this.state.index + 1})
     }
 
     render(){
@@ -35,7 +34,7 @@ class Body extends React.Component{
             <div id="body">
                 <img src={this.state.imageList[this.state.index]} alt={this.state.imageList[this.state.index]}></img>
                 <div id="textDiv">
-                    <p>Name</p>
+                    <p>{this.state.imageList[this.state.index].replace(/^.*[\\\/]/, '').split(".")[0]}</p>
                 </div>
                 <button onClick = {this.onClickNext}></button>
             </div>
